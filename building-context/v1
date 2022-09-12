@@ -1,0 +1,81 @@
+[
+    {
+        "Id": "sha256:8d26ca11e8ba744b1190096fe353a986fbdc408d38efc6ded138c4e4963cfe7a",
+        "RepoTags": [
+            "helloapp:v1"
+        ],
+        "RepoDigests": [],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2022-09-12T14:54:48.187057277Z",
+        "Container": "",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sh"
+            ],
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1243874,
+        "VirtualSize": 1243874,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/udb4ktzq7w3a8fh0zxonxcd8y/diff:/var/lib/docker/overlay2/35d0e6d4da520b737a7b7672bb357061780ff3f152b8f2258b121bbb8ffe0453/diff",
+                "MergedDir": "/var/lib/docker/overlay2/eeft3pk9vnzymemtk1sjeir7f/merged",
+                "UpperDir": "/var/lib/docker/overlay2/eeft3pk9vnzymemtk1sjeir7f/diff",
+                "WorkDir": "/var/lib/docker/overlay2/eeft3pk9vnzymemtk1sjeir7f/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:c1cf1676e7d071645e67257fbb18db931a091c73a211f87bf4559c86e75bcdd3",
+                "sha256:fb26edef28b2eb160b54b498587a3865cf17a114b71c9b376df6d1bfd23ac0eb",
+                "sha256:8e08b62c78c4a494892411493bf0d4d1293d696ee8700f4b72ad6905eb2f6195"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2022-09-12T14:54:49.195703365Z"
+        }
+    }
+]
