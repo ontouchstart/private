@@ -1,0 +1,191 @@
+echo 'FROM busybox\nRUN echo "test1"' | docker build -t test1 -
+docker inspect test1
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM busybox
+ ---> c98db043bed9
+Step 2/2 : RUN echo "test1"
+ ---> Using cache
+ ---> c3885b56b717
+Successfully built c3885b56b717
+Successfully tagged test1:latest
+[
+    {
+        "Id": "sha256:c3885b56b7173897329f3448857947ac17d3a976da2e4c1967f0efd040b74b51",
+        "RepoTags": [
+            "test1:latest"
+        ],
+        "RepoDigests": [],
+        "Parent": "sha256:c98db043bed913c5a7b59534cbf8d976122f98b75cb00baabf8af888041e4f9d",
+        "Comment": "",
+        "Created": "2022-09-12T18:23:32.325327674Z",
+        "Container": "4d683fd510d6023a00df1ef4e2896a2075c24988cf0c3d0d99ed0043005b7506",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "echo \"test1\""
+            ],
+            "Image": "sha256:c98db043bed913c5a7b59534cbf8d976122f98b75cb00baabf8af888041e4f9d",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "20.10.17",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sh"
+            ],
+            "Image": "sha256:c98db043bed913c5a7b59534cbf8d976122f98b75cb00baabf8af888041e4f9d",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1243868,
+        "VirtualSize": 1243868,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/workspace/.docker-root/overlay2/b2b6d1aedb53eaef452d998e870a822011e5a7dd086ad49dc76fa8bffe152da2/merged",
+                "UpperDir": "/workspace/.docker-root/overlay2/b2b6d1aedb53eaef452d998e870a822011e5a7dd086ad49dc76fa8bffe152da2/diff",
+                "WorkDir": "/workspace/.docker-root/overlay2/b2b6d1aedb53eaef452d998e870a822011e5a7dd086ad49dc76fa8bffe152da2/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:c1cf1676e7d071645e67257fbb18db931a091c73a211f87bf4559c86e75bcdd3"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2022-09-12T18:24:20.64441279Z"
+        }
+    }
+]
+docker build -t test2 -<<EOF
+FROM busybox
+RUN echo "test2"
+EOF
+docker inspect test2
+Sending build context to Docker daemon  2.048kB
+Step 1/2 : FROM busybox
+ ---> c98db043bed9
+Step 2/2 : RUN echo "test2"
+ ---> Using cache
+ ---> e29a748b2bec
+Successfully built e29a748b2bec
+Successfully tagged test2:latest
+[
+    {
+        "Id": "sha256:e29a748b2bec2509b5c39b6efff8b3a4b2393ca142264c566ce708fa6dfe67d6",
+        "RepoTags": [
+            "test2:latest"
+        ],
+        "RepoDigests": [],
+        "Parent": "sha256:c98db043bed913c5a7b59534cbf8d976122f98b75cb00baabf8af888041e4f9d",
+        "Comment": "",
+        "Created": "2022-09-12T18:23:36.728351897Z",
+        "Container": "9d0ee53c5925a97b040f4173f0b1f85009f18c2f347c9e7016b652111ddc3a3f",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "echo \"test2\""
+            ],
+            "Image": "sha256:c98db043bed913c5a7b59534cbf8d976122f98b75cb00baabf8af888041e4f9d",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "20.10.17",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "sh"
+            ],
+            "Image": "sha256:c98db043bed913c5a7b59534cbf8d976122f98b75cb00baabf8af888041e4f9d",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1243868,
+        "VirtualSize": 1243868,
+        "GraphDriver": {
+            "Data": {
+                "MergedDir": "/workspace/.docker-root/overlay2/b2b6d1aedb53eaef452d998e870a822011e5a7dd086ad49dc76fa8bffe152da2/merged",
+                "UpperDir": "/workspace/.docker-root/overlay2/b2b6d1aedb53eaef452d998e870a822011e5a7dd086ad49dc76fa8bffe152da2/diff",
+                "WorkDir": "/workspace/.docker-root/overlay2/b2b6d1aedb53eaef452d998e870a822011e5a7dd086ad49dc76fa8bffe152da2/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:c1cf1676e7d071645e67257fbb18db931a091c73a211f87bf4559c86e75bcdd3"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2022-09-12T18:24:20.782492648Z"
+        }
+    }
+]
