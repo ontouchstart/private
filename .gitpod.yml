@@ -1,0 +1,5 @@
+tasks:
+  - init: make firecracker
+    command: make
+
+
