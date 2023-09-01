@@ -4,12 +4,6 @@
 	"name": "Node.js & TypeScript",
 	"build": {
 		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
-		// Append -bullseye or -buster to pin to an OS version.
-		// Use -bullseye variants on local on arm64/Apple Silicon.
-		"args": { 
-			"VARIANT": "18-bullseye"
-		}
 	},
 
 	// Configure tool-specific properties.
@@ -34,25 +28,11 @@
 	"features": {
 		"docker-in-docker": "20.10",
 		"docker-from-docker": "20.10",
-		"kubectl-helm-minikube": "1.23",
-		"terraform": "1.2",
 		"git": "os-provided",
 		"git-lfs": "latest",
 		"github-cli": "latest",
-		"aws-cli": "latest",
-		"azure-cli": "latest",
 		"sshd": "latest",
 		"desktop-lite": "latest",
-		"homebrew": "latest",
-		"fish": "latest",
-		"python": "3.10",
-		"golang": "1.19",
-		"java": "latest",
-		"maven": "3.8",
-		"gradle": "7",
-		"ruby": "3.1",
-		"rust": "1.55",
-		"powershell": "7.1",
-		"dotnet": "6.0"
+		"python": "3.10"
 	}
 }
