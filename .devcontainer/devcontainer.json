@@ -2,5 +2,8 @@
 	"name": "Node.js & TypeScript",
 	"build": {
 		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"python": "latest"
 	}
 }
